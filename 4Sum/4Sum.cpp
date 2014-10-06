@@ -20,6 +20,16 @@ vector<vector<int> > fourSum(vector<int> &num, int target) {
 			int left  = j + 1;
 			int right = size - 1;
 			while (left < right) {
+				/*其实第三次去重应该这么些比较容易看懂 
+				if (k > j + 1 && num[k] == num[k-1]) {
+					k++;
+					continue;
+				}
+				if (t < num.size() - 1 && num[t] == num[t+1]) {
+					t--;
+					continue;
+				}
+				*/
 				int sum = num[i] + num[j] + num[left] + num[right]; 
 				if (target == sum) {
 					vector<int> temp;
